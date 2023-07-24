@@ -1,5 +1,16 @@
+import { CommonClassProps, Photo } from '../types';
+
 interface PreviewGalleryProps {}
 
-export const PreviewGallery: React.FC<PreviewGalleryProps> = ({}) => (
-   <div>PreviewGallery</div>
-);
+interface PreviewGallery extends CommonClassProps {
+   indexActivePhoto: number;
+   photos: Photo;
+   setNewPhoto: (id: number) => void;
+}
+
+export const PreviewGallery: React.FC<PreviewGalleryProps> = ({
+   clasName,
+   indexActivePhoto,
+   photos,
+   setNewPhoto,
+}) => <div>PreviewGallery</div>;

@@ -1,5 +1,16 @@
-interface NavigationProps {}
+import { CommonClassProps } from '../types';
 
-export const Navigation: React.FC<NavigationProps> = ({}) => (
-   <div>Navigation</div>
-);
+interface NavigationProps extends CommonClassProps {
+   disabledPrev?: boolean;
+   disabledNext?: boolean;
+   onPrevClick: () => void;
+   onNextClick: () => void;
+}
+
+export const Navigation: React.FC<NavigationProps> = ({
+   className,
+   disabledPrev,
+   disabledNext,
+   onPrevClick,
+   onNextClick,
+}) => <div>Navigation</div>;
